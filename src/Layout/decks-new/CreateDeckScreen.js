@@ -10,13 +10,12 @@ function CreateDeckScreen() {
   const [deckDescription, setDeckDescription] = useState("");
   const history = useHistory();
 
-  // Handling changes to the deck's name and description in the form
+
   const handleDeckNameChange = (event) => setDeckName(event.target.value);
   const handleDeckDescriptionChange = (event) =>
     setDeckDescription(event.target.value);
 
-  // Adding new deck to the database. Saved deck will have an "id" property
-  // Clicking submit will then take the user to that deck's screen
+
   const handleCreateDeckSubmit = (event) => {
     event.preventDefault();
     createDeck({
