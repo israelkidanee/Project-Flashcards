@@ -1,7 +1,5 @@
 import React from "react";
 
-// Component to be used in both the Add Card and Edit Card Screens
-
 function CardForm({ cardFront, handleCardFrontChange, cardBack, handleCardBackChange }) {
   return (
     <div>
