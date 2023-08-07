@@ -22,13 +22,10 @@ function AddCardScreen() {
     loadDeck();
   }, [deckId]);
 
-  // Handling changes to the card front and card back from the form
   const handleCardFrontChange = (event) => setCardFront(event.target.value);
   const handleCardBackChange = (event) => setCardBack(event.target.value);
 
-  // When the user clicks on the "Save" button, the new card will be created using createCard()
-  // The textarea for the card front and back will be cleared and the process for adding a
-  // card is restarted.
+
   const handleAddCardSave = (event) => {
     event.preventDefault();
     createCard(deckId, { front: cardFront, back: cardBack });
@@ -36,8 +33,7 @@ function AddCardScreen() {
     setCardBack("");
   };
 
-  // If the deck was properly fetched from the API, the following will render properly.
-  // Otherwise, "Loading..." will display
+
   if (deck.name) {
     return (
       <div>
