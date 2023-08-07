@@ -12,16 +12,14 @@ function StudyCard({ cards, currentCard, setCurrentCard, deckId }) {
   const history = useHistory();
   const { url } = useRouteMatch();
 
-  // Function to handle clicks of the Next button
+
   const NextCardHandler = () => {
-    // Keeping track of which card in the deck the user is currently viewing
+
     if (cardCount < cards.length) {
       setIsFrontOfCard((currentSide) => !currentSide);
       setCurrentCard(cards[cardCount]);
       setCardCount((currentCount) => currentCount + 1);
     } else {
-      // Once the user has reached the final card in the deck, they will be prompted to either restart
-      // the deck of cards, or return to the home page
       if (
         window.confirm(
           "Restart cards? Click 'cancel' to return to the home page."
@@ -37,7 +35,7 @@ function StudyCard({ cards, currentCard, setCurrentCard, deckId }) {
     }
   };
 
-  // If there are less than 3 cards in a deck, the user will be prompted to add cards to the deck
+ 
   if (cards.length < 3) {
     return (
       <div>
@@ -51,7 +49,7 @@ function StudyCard({ cards, currentCard, setCurrentCard, deckId }) {
     );
   }
 
-  // Renders the front of the card and the "Flip" button if isFrontOfCard is true
+
   if (isFrontOfCard) {
     return (
       <div className="deck-card card">
@@ -66,7 +64,7 @@ function StudyCard({ cards, currentCard, setCurrentCard, deckId }) {
       </div>
     );
   }
-  // Renders the back of the card and the "Flip" and "Next" buttons if isFrontOfCard is false
+
   return (
     <div className="deck-card card">
       <div className="card-body">
