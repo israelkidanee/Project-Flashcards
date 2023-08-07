@@ -12,7 +12,6 @@ function DeckScreen() {
   const deckId = useParams().deckId;
   const { url } = useRouteMatch();
 
-  // loading the specified deck from the API
   useEffect(() => {
     async function loadDeck() {
       const response = readDeck(deckId);
@@ -23,7 +22,6 @@ function DeckScreen() {
     loadDeck();
   }, [deckId]);
 
-  // If the deck has been fetched from the API, the breadcrumb nav bar and deck info will display
   if (deck.name) {
     return (
       <div>
