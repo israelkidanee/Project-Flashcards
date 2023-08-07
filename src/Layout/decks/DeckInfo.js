@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 import DeckScreenDeleteDeckButton from "./DeckScreenDeleteDeckButton";
 import DeckScreenCard from "./DeckScreenCard";
 
-// This component displays all of a specific deck's info and the buttons used to interact with the deck
 function DeckInfo({ deckName, deckDescription, deckId, cards, url }) {
   const history = useHistory();
 
