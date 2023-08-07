@@ -1,0 +1,29 @@
+{
+  "decks": [
+    {
+      "name": "Uptime",
+      "description": "Free",
+      "id": 1
+    }
+  ],
+  "cards": [
+    {
+      "front": "SLOW",
+      "back": "Uptime",
+      "deckId": 1,
+      "id": 1
+    },
+    {
+      "front": "Faster",
+      "back": "Uptime",
+      "deckId": 1,
+      "id": 2
+    },
+    {
+      "front": "Loading",
+      "back": "Slow",
+      "deckId": 1,
+      "id": 3
+    }
+  ]
+}
