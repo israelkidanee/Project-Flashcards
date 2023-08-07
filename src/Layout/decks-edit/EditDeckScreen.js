@@ -23,13 +23,12 @@ function EditDeckScreen() {
     loadDeck();
   }, [deckId]);
 
-  // Handling changes to the deck name and deck description in the form
+
   const handleDeckNameChange = (event) => setDeckName(event.target.value);
   const handleDeckDescriptionChange = (event) =>
     setDeckDescription(event.target.value);
 
-  // Updating the pre-existing deck with the changes to the deck name and description
-  // Clicking submit will take the user to that deck's screen
+
   const handleEditDeckSubmit = (event) => {
     event.preventDefault();
     updateDeck({
